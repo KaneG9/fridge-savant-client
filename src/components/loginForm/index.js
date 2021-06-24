@@ -3,6 +3,8 @@ import { StoreContext } from "../../providers/store";
 import "./index.css";
 import { FlashContext } from '../../providers/Flash';
 import  { useHistory } from 'react-router-dom'
+import LoginSocialsBar from '../../components/loginSocialsBar'
+
 
 const LoginForm = ({ handleCardFlip }) => {
   const [state, actions] = useContext(StoreContext);
@@ -13,7 +15,7 @@ const LoginForm = ({ handleCardFlip }) => {
   const {createFlashMessage} = useContext(FlashContext);
   const history = useHistory()
 
-  const handleChange = (event) => {
+  const handleLoginChange = (event) => {
     const { name, value } = event.target;
     setLogInDetails((prevState) => ({
       ...prevState,
@@ -39,53 +41,27 @@ const LoginForm = ({ handleCardFlip }) => {
   };
 
   return (
-    <div className="loginForm">
-      <h2 className="loginTitle" data-testid="loginTitle">
-        Login
-      </h2>
-      <form onSubmit={handleLoginSubmit}>
-        <input
-          type="email"
-          className="form-input"
-          id="loginEmail"
-          name="email"
-          placeholder="Email"
-          data-testid="loginEmail"
-          value={logInDetails.email}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <input
-          type="password"
-          className="form-input"
-          id="loginPassword"
-          name="password"
-          placeholder="Password"
-          value={logInDetails.password}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <input
-          type="submit"
-          className="formButton"
-          id="loginButton"
-          value="Log In"
-          data-testid="loginButton"
-        />
-      </form>
-      <p>
-        Don't have an account?{" "}
-        <span
-          className="signUpLink"
-          data-testid="signUpLink"
-          onClick={handleCardFlip}
-        >
-          Sign Up!
-        </span>
-      </p>
-    </div>
+    <form onSubmit={handleLoginSubmit}>
+      <h1>Sign in</h1>
+      <LoginSocialsBar/>
+      <span>or use your account</span>
+      <input
+        type='email'
+        placeholder='Email'
+        onChange={handleLoginChange}
+        name='email'
+        value={logInDetails.email}
+      />
+      <input
+        type='password'
+        placeholder='Password'
+        name='password'
+        onChange={handleLoginChange}
+        value={logInDetails.password}
+      />
+      <a href='#'>Forgot your password?</a>
+      <button>Sign In</button>
+    </form>
   );
 };
 

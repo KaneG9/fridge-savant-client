@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { FlashContext } from '../../providers/Flash';
 import './index.css';
 import axios from 'axios'
+import LoginSocialsBar from '../../components/loginSocialsBar'
 
 const SignUpForm = ({ handleCardFlip }) => {
   const initialState = {
@@ -16,7 +17,7 @@ const SignUpForm = ({ handleCardFlip }) => {
   
   const {createFlashMessage} = useContext(FlashContext);
 
-  const handleChange = (event) => {
+  const handleSignUpChange = (event) => {
     const {name, value} = event.target
     setSignUpDetails(prevState => ({
       ...prevState,
@@ -69,56 +70,40 @@ const SignUpForm = ({ handleCardFlip }) => {
   }  
 
   return (
-    <div className='signUpForm'>
-      <div className='closeSignUp'> 
-        <span className='closeSignUpLink' onClick={handleCardFlip}>X</span>
-      </div>
-      <h2 className='signUpTitle' data-testid='signUpTitle'>Enter your details</h2>
-      <form onSubmit={handleSignUpSubmit}> 
-        <input type="email" 
-              name='email'
-              className="form-input"
-              id="signUpEmail" 
-              placeholder="Email" 
-              value={signUpDetails.email}
-              onChange={handleChange}
-              required />
-        <input type="text"
-              name='name'              
-              className="form-input"
-              id="signUpName" 
-              placeholder="Name" 
-              value={signUpDetails.name} 
-              onChange={handleChange}
-              required />
-        <input type="text"
-              name='username'        
-              className="form-input" 
-              id="signUpUsername" 
-              placeholder="Username" 
-              value={signUpDetails.username} 
-              onChange={handleChange} />
-        <input type='password'
-              name='password'
-              className="form-input"
-              id = 'signUpPassword'
-              placeholder='Password'
-              value={signUpDetails.password}
-              onChange={handleChange}
-              required />
-        <input type='password'
-              name='confirmPassword'
-              className="form-input"
-              id = 'signUpConfirmPassword'
-              placeholder='Confirm password'
-              value={signUpDetails.confirmPassword}
-              onChange={handleChange}
-              required />
-        <br/>
-        <input className='formButton' id='signUpButton' type='submit' data-testid='signUpLink' value='Sign Up' />
-      </form>
-    </div>
-  )
+    <form onSubmit={handleSignUpSubmit}>
+      <h1>Create Account</h1>
+      <LoginSocialsBar/>
+      <span>or use your email for registration</span>
+      <input
+        type='text'
+        placeholder='Name'
+        name='name'
+        onChange={handleSignUpChange}
+        value={signUpDetails.name}
+      />
+      <input
+        type='email'
+        name='email'
+        placeholder='Email'
+        onChange={handleSignUpChange}
+        value={signUpDetails.email}
+      />
+      <input
+        type='password'
+        name='password'
+        placeholder='Password'
+        value={signUpDetails.password}
+        onChange={handleSignUpChange}
+      />
+      <input
+        type='password'
+        name='confirmPassword'
+        placeholder='Confirm Password'
+        value={signUpDetails.confirmPassword}
+        onChange={handleSignUpChange}
+      />
+      <button type='submit'>Sign Up</button>
+    </form>  )
 }
 
 
