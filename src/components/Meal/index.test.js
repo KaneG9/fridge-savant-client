@@ -30,5 +30,7 @@ describe("<Meal/>", () => {
     expect(rendered.getByText("fun world")).toBeInTheDocument()
     expect(rendered.getByText("Test ingredient")).toBeInTheDocument()
     expect(rendered.getByText(`Ready in 5 minutes`)).toBeTruthy()
+    expect(StringUtils.capitalizeFirstLetter).toHaveBeenCalledTimes(1)
+
   })
 })
