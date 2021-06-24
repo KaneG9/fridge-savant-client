@@ -4,11 +4,8 @@ import { StoreContext } from '../../providers/store';
 
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faGooglePlus } from '@fortawesome/free-brands-svg-icons';
-import { faPinterest } from '@fortawesome/free-brands-svg-icons';
 import './index.css';
+import LoginSocialsBar from '../../components/loginSocialsBar'
 
 const Login = () => {
 
@@ -123,17 +120,7 @@ const Login = () => {
         <div className='login-form-container sign-up-container'>
           <form onSubmit={handleSignUpSubmit}>
             <h1>Create Account</h1>
-            <div className='social-container'>
-              <a href='#' className='social'>
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a href='#' className='social'>
-                <FontAwesomeIcon icon={faGooglePlus} />
-              </a>
-              <a href='#' className='social'>
-                <FontAwesomeIcon icon={faPinterest} />
-              </a>
-            </div>
+            <LoginSocialsBar/>
             <span>or use your email for registration</span>
             <input
               type='text'
@@ -169,17 +156,7 @@ const Login = () => {
         <div className='login-form-container sign-in-container'>
           <form onSubmit={handleLoginSubmit}>
             <h1>Sign in</h1>
-            <div className='social-container'>
-              <a href='#' className='social'>
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a href='#' className='social'>
-                <FontAwesomeIcon icon={faGooglePlus} />
-              </a>
-              <a href='#' className='social'>
-                <FontAwesomeIcon icon={faPinterest} />
-              </a>
-            </div>
+            <LoginSocialsBar/>
             <span>or use your account</span>
             <input
               type='email'
