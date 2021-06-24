@@ -11,19 +11,12 @@ import { faPinterest } from '@fortawesome/free-brands-svg-icons';
 import './index.css';
 
 const Login = () => {
-  window.onload = function () {
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('form-main-container');
 
-    signUpButton.addEventListener('click', () => {
-      container.classList.add('right-panel-active');
-    });
+  const [isRotated, setIsRotated] = useState(false);
 
-    signInButton.addEventListener('click', () => {
-      container.classList.remove('right-panel-active');
-    });
-  };
+  const handleCardFlip = () => {
+    setIsRotated((rotated) => !rotated)
+  }
 
   const initialState = {
     email: '',
@@ -126,7 +119,7 @@ const Login = () => {
 
   return (
     <div className='form-body'>
-      <div className='form-main-container' id='form-main-container'>
+      <div className={`form-main-container ${isRotated ? 'right-panel-active' : ''}`} id='form-main-container' onClick={handleCardFlip}>
         <div className='login-form-container sign-up-container'>
           <form onSubmit={handleSignUpSubmit}>
             <h1>Create Account</h1>
