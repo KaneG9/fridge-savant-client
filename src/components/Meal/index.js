@@ -21,7 +21,7 @@ const Meal = ({ meal }) => {
   const saveBookmark = () => {
     changeColour();
 
-    const response = axios.post(
+    axios.post(
       "http://localhost:5000/api/bookmarks",
       {
         recipeId: meal.id.toString(),

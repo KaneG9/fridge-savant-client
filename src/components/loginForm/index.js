@@ -6,7 +6,7 @@ import  { useHistory } from 'react-router-dom'
 import LoginSocialsBar from '../../components/loginSocialsBar'
 
 
-const LoginForm = ({ handleCardFlip }) => {
+const LoginForm = () => {
   const [state, actions] = useContext(StoreContext);
   const [logInDetails, setLogInDetails] = useState({
     email: "",

@@ -18,7 +18,7 @@ const Login = () => {
           <SignUpForm handleCardFlip={handleCardFlip}/>
         </div>
         <div className='login-form-container sign-in-container'>
-          <LogInForm handleCardFlip={handleCardFlip}/>
+          <LogInForm />
         </div>
         <div className='overlay-container'>
           <div className='overlay'>

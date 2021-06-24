@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCarrot } from "@fortawesome/free-solid-svg-icons";
+import { FlashContext } from '../../providers/Flash';
+import { StoreContext } from "../../providers/store";
 
-const SearchBox = ({ addIngredient }) => {
+
+const SearchBox = () => {
   const [ingredientInput, setIngredientInput] = useState("");
 
- const queryChange = (ingredientInput) => {
+  const [{ basket }, { addIngredient }] =
+    useContext(StoreContext);
 
+  const {createFlashMessage} = useContext(FlashContext);
+
+  const queryChange = (ingredientInput) => {
    if(ingredientInput === "" ) {
-     return
-   } 
+    createFlashMessage({
+      type: 'error',
+      message: 'Please enter a valid ingredient.'
+    })
+    return
+   } else if (basket.find((ingredient) => ingredient.name === ingredientInput.toLowerCase())) {
+    createFlashMessage({
+      type: 'error',
+      message: 'You have already added that ingredient.'
+    })
+    setIngredientInput("")
+    return
+   }
     addIngredient({ name: ingredientInput.toLowerCase()})
     setIngredientInput("")
   }
