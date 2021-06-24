@@ -30,6 +30,6 @@ describe("<Ingredient />", () => {
     fireEvent.click(rendered.getByTestId("deleteIngredientButton"))
 
     expect(defaultProps.deleteIngredient).toHaveBeenCalledTimes(1)
-    expect(defaultProps.deleteIngredient).toHaveBeenCalledWith(defaultProps.name)
+    expect(defaultProps.deleteIngredient).toHaveBeenCalledWith({'name': defaultProps.name})
   })
 })
