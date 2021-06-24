@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './index.css';
 import logo from './images/logo.png';
 import { Link } from "react-router-dom";
 import {clearStoreToken} from  '../../lib/token'
+import { FlashContext } from '../../providers/Flash';
 
 const Header = () => {
+
+  const {createFlashMessage} = useContext(FlashContext);
+
+  const handleLogOut = () => {
+    clearStoreToken()
+    createFlashMessage({
+      type: 'success',
+      message: 'Successfully Logged Out.'
+    })
+  }
+  
   return (
     <div>
       <header className='header-outer'>
@@ -23,7 +35,7 @@ const Header = () => {
               <span>My Recipes</span>
             </Link>
             <Link to="/login">
-              <span onClick={() => clearStoreToken()}>Log Out</span>
+              <span onClick={() => handleLogOut()}>Log Out</span>
             </Link>
           </nav>
         </div>
