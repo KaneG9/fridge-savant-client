@@ -11,24 +11,10 @@ import SearchBox from "../../components/SearchBox";
 import { StoreContext } from "../../providers/store";
 
 const Home = () => {
-  const [{ basket }, { addIngredient, removeIngredient, clearIngredients }] =
+  const [{ basket }, { removeIngredient, clearIngredients }] =
     useContext(StoreContext);
   const [mealData, setMealData] = useState(null);
   const [mealIds, setMealIds] = useState([]);
-
-  // const addIngredient = () => {
-  //   if (
-  //     basket.find(
-  //       (ingredient) => ingredient.name === ingredientInput.toLowerCase()
-  //     )
-  //   ) {
-  //     // add flash error message
-  //   } else if (ingredientInput === "") return;
-  //   else {
-  //     setBasket(basket.concat({ name: ingredientInput }));
-  //   }
-  //   setIngredientInput("");
-  // };
 
   const getMealInfo = (ingredients) => {
     axios
@@ -91,7 +77,7 @@ const Home = () => {
       <div className='Slider'>
         <Slider />
       </div>
-      <SearchBox addIngredient={addIngredient} />
+      <SearchBox />
 
       <div className='Ingredients'>
         <IngredientList basket={basket} deleteIngredient={removeIngredient} />
