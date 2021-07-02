@@ -16,21 +16,33 @@
 </details>
 
 <details>
-<summary>Home Feed with dark mode on</summary>
+<summary>Home page with login flash message</summary>
 <br>
-<img src="app/assets/images/Screenshot%202021-05-31%20at%2016.36.10.png">
+<img src="public/assets/images/HomePage.png">
 </details>
 
 <details>
-<summary>Home Feed with dark mode on</summary>
+<summary>Items added to basket</summary>
 <br>
-<img src="app/assets/images/Screenshot%202021-05-31%20at%2016.36.10.png">
+<img src="public/assets/images/Basket.png">
 </details>
 
 <details>
-<summary>Home Feed with dark mode on</summary>
+<summary>Recipe search results</summary>
 <br>
-<img src="app/assets/images/Screenshot%202021-05-31%20at%2016.36.10.png">
+<img src="public/assets/images/Recipes.png">
+</details>
+
+<details>
+<summary>Share Recipes</summary>
+<br>
+<img src="public/assets/images/Share.png">
+</details>
+
+<details>
+<summary>Bookmarks page</summary>
+<br>
+<img src="public/assets/images/Bookmarks.png">
 </details>
 
 
