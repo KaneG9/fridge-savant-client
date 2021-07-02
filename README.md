@@ -148,8 +148,11 @@ I need a my recipes page
 ## Reflections
 ----------------------------------------
 Our main goal of the project was to produce a high quality finished article. In order to ensure this was the case we decided to focus on producing fewer features but making sure they were well styled and the user experience was smooth and enjoyable.
+
 As a team we decided to use the MERN stack to build this project. This was a brand new technology for the whole group and therefore a significant amount of time was devoted to understanding the stack. Initially we planned to have everyone work on both the server and client side to gain maximum exposure, however very quickly we realised that this would not work due to the amount of learning required to understand each of the new technologies. After the project I will be spending some time to try and fully understand how the server side works and potentially implement a new feature for practice.
+
 Throughout the project we worked on a single zoom call using breakout rooms, this meant we could emulate working in an office environment as closely as possible as we could move from room to room in order to communicate effectively, share knowledge and seek help when needed. 
+
 Each day we had a morning stand up to let the rest of the group know what each pair was working on, merge code from the previous day, bring up issues which people needed help on and plan what needed to be done for the day. In the afternoons we also had a retro in which we discussed what had been completed during the day as well as sharing knowledge on useful topics.
 
 ----------------------------------------
