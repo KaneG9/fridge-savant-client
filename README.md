@@ -15,8 +15,6 @@
 ----------------------------------------
   - [Concept](#concept)
   - [Setup](#setup)
-  - [Testing and Linting](#testing-and-linting)
-    - [Test Coverage](#test-coverage)
   - [Features](#features)
   - [Tech Stack](#tech-stack)
     - [Dependencies](#dependencies)
@@ -34,50 +32,46 @@ To run the app - clone this repo and install dependencies: \
 \
 `Client Side`
 ```
-$ git clone git@github.com:jasonrowsell/fridge-savant-client.git
+$ git clone https://github.com/KaneG9/fridge-savant-client.git
 $ cd fridge-savant-client
 $ yarn install
 ```
 Create and configure `.env` to add your API key
 ```
-(config instructions)
+Create a spoonacular account at https://spoonacular.com/food-api and add your API key to the .env file as shown in the .env.example
 ```
 `Server Side`
-The server side for this project can be found in a separate repo [here](https://github.com/mikejeuga/fridge-savant-server)
+The server side for this project can be found in a separate repo [here](https://github.com/KaneG9/fridge-savant-server)
 ```
-(instructions)
+$ git clone https://github.com/KaneG9/fridge-savant-server.git
+$ cd fridge-savant-server
+$ npm install
 ```
-In the project directory, run:
+In the client project directory, run:
 
 ```
  yarn start
+```
+In the server project directory, run:
+
+```
+npm start
 ```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-----------------------------------------
-## Testing and Linting
-----------------------------------------
-### Run Tests
-```
-yarn test
-```
-### Run Linting
-```
-
-```
-### Test Coverage
-(...)
 
 ---------------------------------------
 ## Features
 ----------------------------------------
-- [x] Feature 1
-- [x] Feature 2
-- [x] Feature 3
-- [ ] 
-etc...
+- [x] Create an account
+- [x] Log in and log out with an authentication token saved in local storage
+- [x] Add ingredients to your basket
+- [x] Find recipes based on your basket
+- [x] Share recipes on social media
+- [x] Add bookmarks to favorite recipes 
+- [ ] Profile page
 
 ----------------------------------------
 ## Tech Stack
@@ -88,18 +82,8 @@ etc...
 - React
 - Node
 
-### Testing Franmework:
-Front end: 
+### Testing Framework: 
 - Jest
-
-Back end: 
-- (...)
-<br>
-
-### Dependencies
-
-(......)
-<br>
 
 ----------------------------------------
 ## Design and Approach
@@ -109,6 +93,34 @@ Back end:
 
 ### User stories
 ```
+As a user,
+So I can show whats ingredients I have,
+I would like to be able to add ingredients to my basket
+```
+```
+As a user, 
+So I can work out what to cook,
+I would like to be able to see recipes based on my basket
+```
+```
+As a user, 
+So I can save my information,
+I would like to be able to create an account
+```
+```
+As a user,
+So I can tell everyone what I am cooking,
+I would like to be able to share my recipes on social media
+```
+```
+As a user,
+So I can save my favourite recipes,
+I would like to be able to bookmark recipes
+```
+```
+As a user,
+So I can view my bookmarks,
+I need a my recipes page
 ```
 
 ### Diagrams
@@ -131,18 +143,23 @@ Back end:
 ----------------------------------------
 - To learn a new tech stack (MERN)
 - 95% Test coverage
-- 
+- Produce a high quality finished article 
 ----------------------------------------
 ## Reflections
 ----------------------------------------
-(Working approach/values, problems and solutions, learnings etcs. )
+Our main goal of the project was to produce a high quality finished article. In order to ensure this was the case we decided to focus on producing fewer features but making sure they were well styled and the user experience was smooth and enjoyable.
+As a team we decided to use the MERN stack to build this project. This was a brand new technology for the whole group and therefore a significant amount of time was devoted to understanding the stack. Initially we planned to have everyone work on both the server and client side to gain maximum exposure, however very quickly we realised that this would not work due to the amount of learning required to understand each of the new technologies. After the project I will be spending some time to try and fully understand how the server side works and potentially implement a new feature for practice.
+Throughout the project we worked on a single zoom call using breakout rooms, this meant we could emulate working in an office environment as closely as possible as we could move from room to room in order to communicate effectively, share knowledge and seek help when needed. 
+Each day we had a morning stand up to let the rest of the group know what each pair was working on, merge code from the previous day, bring up issues which people needed help on and plan what needed to be done for the day. In the afternoons we also had a retro in which we discussed what had been completed during the day as well as sharing knowledge on useful topics.
 
 ----------------------------------------
 ## Progression Ideas
 ----------------------------------------
--  
-- 
-- 
+- Dietary requirements for searches
+- Add more filters for meal (e.g. sweet or savoury)
+- Nutrition information on the recipes
+- Display full recipes within the web page rather than link to exernal websites
+- Add a profile page
 
 ----------------------------------------
 
