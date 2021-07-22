@@ -21,7 +21,7 @@ const Bookmark = () => {
   };
 
   const getBookmarkAll = async () => {
-    const response = await axios.get(`${process.env.SERVER_URL}api/bookmarks`, {
+    const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}api/bookmarks`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${getAuthToken()}`,

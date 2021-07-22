@@ -52,7 +52,7 @@ const SignUpForm = ({ handleCardFlip }) => {
       try {
         console.log(process.env)
         const response = await axios.post(
-          `${process.env.SERVER_URL}api/users/signup`,
+          `${process.env.REACT_APP_SERVER_URL}api/users/signup`,
           JSON.stringify(userDetails),
           {
             headers: {

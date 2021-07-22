@@ -5,7 +5,7 @@ import { setAuthToken, getAuthToken } from "../../token";
 export const signIn = async ({ email, password }) => {
   try {
     const response = await axios.post(
-      `${process.env.SERVER_URL}api/users/login`,
+      `${process.env.REACT_APP_SERVER_URL}api/users/login`,
       { email, password },
       {
         headers: {
@@ -32,7 +32,7 @@ export const signIn = async ({ email, password }) => {
 };
 
 export const getUser = async () => {
-  const response = await axios.get(`${process.env.SERVER_URL}api/users`, {
+  const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}api/users`, {
     headers: {
       Storeorization: `Bearer ${getAuthToken()}`,
     },

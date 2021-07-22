@@ -22,7 +22,7 @@ const Meal = ({ meal }) => {
     changeColour();
 
     axios.post(
-      `${process.env.SERVER_URL}api/bookmarks`,
+      `${process.env.REACT_APP_SERVER_URL}api/bookmarks`,
       {
         recipeId: meal.id.toString(),
       },
@@ -36,7 +36,7 @@ const Meal = ({ meal }) => {
   };
 
   const getBookmark = async () => {
-    const response = await axios.get(`${process.env.SERVER_URL}api/bookmarks`, {
+    const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}api/bookmarks`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${getAuthToken()}`,
