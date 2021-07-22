@@ -7,6 +7,9 @@
 
 <p> Designed to inspire creativity in the kitchen when your fridge looks bare, the app makes decision making easier when it comes to meal times. By encouraging you to use up the ingredients you have to hand, Fridge Savant helps you to reduce food waste, and so manage your budget better. </p>
 
+<p> A video demo can be found [here](https://drive.google.com/file/d/1kjQj2J2epcq-nY_oSBYSRr8ERoaZj8zu/view?usp=sharing)</p>
+<p> The app is deployed [here](https://immense-woodland-94956.herokuapp.com/login). When logging in it make take time to boot up the server side, or you can skip the login by visiting the root directory</p>
+
 ## Screenshots
 
 <details>
