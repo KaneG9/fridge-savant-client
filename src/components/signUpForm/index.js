@@ -51,7 +51,7 @@ const SignUpForm = ({ handleCardFlip }) => {
 
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/users/signup",
+          `${process.env.SERVER_URL}api/users/signup`,
           JSON.stringify(userDetails),
           {
             headers: {
